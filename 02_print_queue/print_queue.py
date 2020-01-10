@@ -15,11 +15,16 @@ class Job:
 
 class Printer:
     def __init__(self):
-        self.queue = PrintQueue()
+        self.current_job = None
 
-    def get_job(self):
-        pass
+    def get_job(self, queue):
+        try:
+            self.current_job = queue.dequeue()
+        except IndexError:
+            return "No More Jobs in Queue"
 
     def print_job(self):
-        pass
+        while not self.current_job.check_complete():
+            self.current_job.print_page()
 
+        print("Printing Complete")
