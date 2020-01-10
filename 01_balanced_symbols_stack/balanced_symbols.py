@@ -4,4 +4,15 @@ from stack import Stack
 
 
 def BalancedSymbols(string):
-    return False
+    keymap = {"(": ")", "[": "]", "{": "}"}
+    stack = Stack()
+    for symbol in string:
+        if symbol in keymap:
+            stack.push(symbol)
+        else:
+            if stack.is_empty():
+                return False
+            if keymap[stack.peek()] == symbol:
+                stack.pop()
+
+    return stack.is_empty()
