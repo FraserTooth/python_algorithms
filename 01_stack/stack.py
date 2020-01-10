@@ -3,8 +3,7 @@ class Stack:
         self.items = []
 
     def push(self, item):
-        """
-        Adds an item to end
+        """Adds an item to end
         Returns Nothing
 
         Time Complexity = O(1)
@@ -12,7 +11,12 @@ class Stack:
         self.items.append(item)
 
     def pop(self):
-        pass
+        """Removes Last Item
+        Returns Item
+
+        Time Complexity = O(1)
+        """
+        return self.items.pop()
 
     def peek(self):
         pass
