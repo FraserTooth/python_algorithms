@@ -37,4 +37,8 @@ class Stack:
         return len(self.items)
 
     def is_empty(self):
-        pass
+        """Returns Boolean of whether list is empty
+
+        Time Complexity = O(1)
+        """
+        return self.items == []

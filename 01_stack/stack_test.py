@@ -43,6 +43,14 @@ class TestStack(unittest.TestCase):
         input.push("fish")
         self.assertEqual(input.size(), 2)
 
+    def test_is_empty(self):
+        input = Stack()
+        self.assertEqual(input.is_empty(), True)
+        input.push(1)
+        self.assertEqual(input.is_empty(), False)
+        input.push("fish")
+        self.assertEqual(input.is_empty(), False)
+
 
 if __name__ == "__main__":
     unittest.main()
