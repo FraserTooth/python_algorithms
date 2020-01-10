@@ -30,7 +30,11 @@ class Stack:
         return None
 
     def size(self):
-        pass
+        """Returns Size of Stack
+
+        Time Complexity = O(1)
+        """
+        return len(self.items)
 
     def is_empty(self):
         pass

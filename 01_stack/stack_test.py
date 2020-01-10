@@ -35,6 +35,14 @@ class TestStack(unittest.TestCase):
         input = Stack()
         self.assertEqual(input.peek(), None)
 
+    def test_size(self):
+        input = Stack()
+        self.assertEqual(input.size(), 0)
+        input.push(1)
+        self.assertEqual(input.size(), 1)
+        input.push("fish")
+        self.assertEqual(input.size(), 2)
+
 
 if __name__ == "__main__":
     unittest.main()
