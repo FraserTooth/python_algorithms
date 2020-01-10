@@ -22,16 +22,16 @@ class TestStack(unittest.TestCase):
         d.add_front("apple")
         d.add_front("banana")
         d.add_front("cherry")
-        self.assertEqual(d.remove_front(), "apple")
-        self.assertEqual(d.items, ["cherry", "banana"])
+        self.assertEqual(d.remove_front(), "cherry")
+        self.assertEqual(d.items, ["banana", "apple"])
 
     def test_remove_rear(self):
         d = Dequeue()
         d.add_front("apple")
         d.add_front("banana")
         d.add_front("cherry")
-        self.assertEqual(d.remove_rear(), "cherry")
-        self.assertEqual(d.items, ["banana", "apple"])
+        self.assertEqual(d.remove_rear(), "apple")
+        self.assertEqual(d.items, ["cherry", "banana"])
 
     def test_remove_empty(self):
         d = Dequeue()
@@ -44,14 +44,14 @@ class TestStack(unittest.TestCase):
         d.add_front("apple")
         d.add_front("banana")
         d.add_front("cherry")
-        self.assertEqual(d.peek_front, "apple")
-        self.assertEqual(d.peek_rear, "cherry")
         self.assertEqual(d.items, ["cherry", "banana", "apple"])
+        self.assertEqual(d.peek_front(), "cherry")
+        self.assertEqual(d.peek_rear(), "apple")
 
     def test_peek_empty(self):
         d = Dequeue()
-        self.assertEqual(d.peek_front, None)
-        self.assertEqual(d.peek_rear, None)
+        self.assertEqual(d.peek_front(), None)
+        self.assertEqual(d.peek_rear(), None)
 
     def test_size(self):
         d = Dequeue()
