@@ -22,10 +22,23 @@ class Queue:
             return self.items.pop()
 
     def peek(self):
-        pass
+        """Returns Last Item
+
+        Time Complexity = O(1)
+        """
+        if self.items:
+            return self.items[-1]
 
     def size(self):
-        pass
+        """Returns Size of Stack
+
+        Time Complexity = O(1)
+        """
+        return len(self.items)
 
     def is_empty(self):
-        pass
+        """Returns Boolean of whether list is empty
+
+        Time Complexity = O(1)
+        """
+        return self.items == []
