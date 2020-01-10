@@ -3,7 +3,13 @@ class Stack:
         self.items = []
 
     def push(self, item):
-        pass
+        """
+        Adds an item to end
+        Returns Nothing
+
+        Time Complexity = O(1)
+        """
+        self.items.append(item)
 
     def pop(self):
         pass
