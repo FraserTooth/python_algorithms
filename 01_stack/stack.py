@@ -16,10 +16,18 @@ class Stack:
 
         Time Complexity = O(1)
         """
-        return self.items.pop()
+        if self.items:
+            return self.items.pop()
+        return None
 
     def peek(self):
-        pass
+        """Returns Last Item
+
+        Time Complexity = O(1)
+        """
+        if self.items:
+            return self.items[-1]
+        return None
 
     def size(self):
         pass
