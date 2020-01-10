@@ -45,7 +45,7 @@ class TestStack(unittest.TestCase):
         q.enqueue(2)
         self.assertEqual(q.size(), 3)
 
-    def test_size(self):
+    def test_is_empty(self):
         q = Queue()
         self.assertEqual(q.is_empty(), True)
         q.enqueue(1)
